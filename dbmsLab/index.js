@@ -9,7 +9,7 @@ const session = require("express-session");
 const path = require("path");
 const mysql = require("mysql2");
 
-const bcrypt = require("bcrypt"); 
+const bcrypt = require("bcryptjs"); 
 const insertlisting=require("./init/index.js");
 const app = express();
 const port = 3000;
