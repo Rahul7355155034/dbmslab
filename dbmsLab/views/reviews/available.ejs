@@ -1,0 +1,15 @@
+<%layout("/layout/boilerplate.ejs")-%>
+<% listings.forEach(listing => { %>
+    <div class="available">
+      <h3> Hotel Name:<%= listing.title %></h3>
+  
+      <p>Price: $<%= listing.price %></p>
+      <p id="room">Available Rooms: <%= listing.available_rooms %></p>
+      <form action="/book/<%= listing.id %>" method="POST">
+        <label for="room_count">Number of rooms:</label>
+        <input type="number" name="room_count" min="1" max="<%= listing.available_rooms %>" required>
+        <button class="btn btn-success" type="submit">Book Now</button>
+      </form>
+    </div>
+  <% }) %>
+  

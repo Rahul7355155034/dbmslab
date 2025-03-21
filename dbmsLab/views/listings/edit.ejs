@@ -1,0 +1,50 @@
+<% layout("/layout/boilerplate.ejs")-%>
+<body>
+    <h3 style="margin-left:500px"> Edit the  form </h3><br>
+  <div class="row row">
+    <div class="col col-8 offset-2">
+    <form method="post" action="/listings/<%= results[0].id %>?_method=PUT" 
+    >
+        <div class="mb-3">
+            <label for="title" class="form-label">title</label>
+ <input value="<%= results[0].title %>" name="listing[title]" type ="text"class="form-control" required>
+ <div class="valid-feedback">Title look goods!</div>   
+</div>
+ 
+ <div class="mb-3">
+    <label for="description" class="form-label">description</label>
+ <input value="<%= results[0].description %>" name="listing[description]" type ="text" class="form-control" required>
+ </div>
+ <div class="mb-3">
+   <img src="<%= results[0].image%>"  height="110px" width="300px">
+   
+
+</div>
+ <div class="mb-3">
+    <label for="image" class="form-label">upload image </label>
+ <input  value="<%= results[0].image%>" name="listing[image]" type ="text" class="form-control">
+</div> 
+<div class="row ">
+ <div class="mb-3 col-md-4">
+    <label for="price" class="form-label">price</label>
+ <input value="<%= results[0].price %>" name="listing[price]" type="text"class="form-control" required>
+ <div class="invalid-feedback">Please enter valid price </div>
+ </div>
+ 
+ <div class="mb-3 col-md-8">
+    <label for="location" class="form-label">location</label>
+ <input value="<%= results[0].location %>" name="listing[location]" type ="text"class="form-control"required>
+ <div class="invalid-feedback">Please enter valid location </div>
+</div>
+</div>
+ <div class="mb-3">
+    <label for="countryh" class="form-label">country</label>
+ <input value="<%= results[0].country %>"name="listing[country]" type ="text" class="form-control" required>
+ <div class="invalid-feedback">Please enter valid country 
+</div>
+ <button class="btn btn-primary mt-3 neh">update</button>
+    </form>
+    
+</div></div>
+
+</body>

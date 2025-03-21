@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Institute Website</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header, footer { background-color: #f4f4f4; padding: 20px; text-align: center; }
+        nav { background-color: #333; color: white; padding: 10px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; }
+        nav a:hover { text-decoration: underline; }
+        section { margin: 20px; padding: 20px; background-color: #f9f9f9; border-radius: 5px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
+        .gallery img { width: 100%; max-width: 300px; height: auto; margin: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        .gallery { display: flex; flex-wrap: wrap; justify-content: center; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to ABC Institute</h1>
+        <p>Empowering Students for a Brighter Future</p>
+    </header>
+
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#departments">Departments</a>
+        <a href="#admission">Admission</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>ABC Institute is a premier educational institution dedicated to fostering innovation, research, and academic excellence. We offer a wide range of undergraduate and postgraduate programs to nurture future leaders.</p>
+    </section>
+
+    <section id="departments">
+        <h2>Departmental Information</h2>
+        <table>
+            <tr>
+                <th>Department</th>
+                <th>HOD</th>
+                <th>Contact</th>
+            </tr>
+            <tr>
+                <td>Computer Science</td>
+                <td>Dr. Smith</td>
+                <td>cs@abc.edu</td>
+            </tr>
+            <tr>
+                <td>Mechanical Engineering</td>
+                <td>Dr. Johnson</td>
+                <td>me@abc.edu</td>
+            </tr>
+            <tr>
+                <td>Civil Engineering</td>
+                <td>Dr. Brown</td>
+                <td>ce@abc.edu</td>
+            </tr>
+            <tr>
+                <td>Electrical Engineering</td>
+                <td>Dr. Davis</td>
+                <td>ee@abc.edu</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="admission">
+        <h2>Admission Process</h2>
+        <p>Applications are open for the academic year 2024-2025. Interested candidates can apply online through our official portal. For more details, visit our <a href="admission.html">Admission Page</a>.</p>
+    </section>
+
+    <section class="gallery">
+        <h2>Campus Gallery</h2>
+        <img src="campus1.jpg" alt="Campus View 1">
+        <img src="campus2.jpg" alt="Campus View 2">
+        <img src="campus3.jpg" alt="Campus View 3">
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Address: 123 Main Street, City, Country</p>
+        <p>Phone: +123-456-7890</p>
+        <p>Email: info@abc.edu</p>
+        <form action="submit_contact.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ABC Institute. All rights reserved.</p>
+    </footer>
+</body>
+</html>

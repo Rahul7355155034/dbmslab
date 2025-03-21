@@ -1,0 +1,11 @@
+<% layout("/layout/boilerplate.ejs")-%>
+<h2>Your Bookings</h2>
+<% bookings.forEach(booking => { %>
+  <div class="mybooking">
+    <h3> HOTEL NAME:<%= booking.title %></h3>
+
+    <p>Rooms Booked: <%= booking.room_count %></p>
+    <p>Booking Date: <%= booking.booking_date %></p>
+  </div>
+<% }) %>
+

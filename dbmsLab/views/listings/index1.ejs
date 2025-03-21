@@ -1,0 +1,28 @@
+<% layout("/layout/boilerplate.ejs")-%>
+
+    <h3> Listing detail:</h3>
+    <!-- //this divide the row into 3 column -->
+    <div class="row row-cols-lg-3">
+        <% for(let result of results){ %>
+   <a href="/listings/<%= result.id %>" class="listing-link">
+    <div class="card">
+        <img src="<%= result.imageUrl || 'path/to/placeholder-image.jpg' %>" alt="<%= results.title %> image" />
+        
+        <div class="card-body">
+            <div class="card-img-overlay">abcd</div>
+            <%= result.title%><br>
+            &#8377; <%= result.price.toLocaleString("en-IN") %> /night
+            <br>
+             <%= result.location %><br>
+             
+            <%= result.country %><br> 
+
+        </div>
+
+      </div>
+    </a>
+    <%} %>
+
+    </div>
+ 
+

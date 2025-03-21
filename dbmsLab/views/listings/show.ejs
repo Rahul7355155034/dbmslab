@@ -1,0 +1,97 @@
+<% layout("/layout/boilerplate.ejs")-%>
+<div class="row">
+<div class="col-6 offset-3">
+    
+
+<div class="card">
+    <img class="card-img-top" src="<%=results[0].image.url%>" alt="Card image cap">
+    <div class="card-body">
+        <div class="card-img-overlay">abcd</div>
+       <h3><%= results[0].title%></h3> 
+        <%= results[0].description%><br>
+ 
+        &#8377; <%= results[0].price.toLocaleString("en-IN") %> /night
+        <%= results[0].location %><br>
+        <br>
+        <%= results[0].country %><br> 
+      
+       
+       
+    </div>
+  
+</div>
+
+
+
+<form method="get" action="/available/<%= results[0].id %>">
+    <button class="btn btn-danger"> Click To check Availble room </button>
+
+</form>
+
+<!-- //botton -->
+<% if(currentUser && currentUser.id === results[0].owner_id){ %>
+<div class="row ">
+    <div class="mb-2 col-2">
+
+    <form method="get" action="/listings/<%= results[0].id %>/edit">
+        <button class="btn btn-danger">Edit</button>
+    
+    </form>
+    </div>
+    <div class="mb-3 col">
+       <form method="post" action="/listings/<%= results[0].id %>?_method=Delete">
+              <button class="btn btn-dark">delete</button>
+
+       </form>
+       <br>
+       
+      
+</div>
+</div> 
+<%} %> 
+</div>
+
+
+
+<form method="get" action="/listings/<%= results[0].id %>/review">
+    <button class="btn btn-dark"> Write Review</button>
+  </form>
+  <!-- //hide button -->
+   <!-- to hide button -->
+  
+ 
+<!-- //review -->
+<div id="review">
+ <h3>Review</h3>
+<% for(let result of results1 ){ %>
+  
+    Review
+    <div class="review">
+ rating:<%=result.rating%>
+<br>
+ comment:<%=result.comment%>
+
+ <br>
+
+ 
+</div>
+<% if(currentUser && currentUser.id === result.user_id){ %>
+    <div class="row ">
+        <div class="mb-3 col-2">
+  
+   
+        <form method="get" action="/review/<%= result.id %>/edit">
+            <button class="btn btn-danger">Edit</button>
+        
+        </form>
+        </div>
+    <div class="mb-3 col">
+           <form method="post" action="/review/<%= result.id %>?_method=Delete">
+                  <button class="btn btn-dark">delete</button>
+    
+
+
+           </form>
+    </div></div>
+    <%} %><%}%></div>
+  </div>

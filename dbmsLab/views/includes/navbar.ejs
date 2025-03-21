@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-md bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/listings"> <i class="fa-solid fa-compass"></i> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <!-- <a class="nav-link active"   href="/">Home</a> -->
+          <a class="nav-link" href="/listings">Explore</a>
+        </div>
+       
+            <form action="/filter" method="get">
+              <lable for="filter">
+                Find
+              </lable>
+              <input name="filter" type="text">
+              <button ></button>
+            </form>
+        
+            <div class="navbar-nav  ms-auto">
+              <a class="nav-link" href="/listings/new">Add new</a>  </div>
+          <div class="navbar-nav ">
+            <a class="nav-link" href="/my-bookings">Show mybooking</a>
+          </div>
+       
+      <div class="navbar-nav ">
+        <a class="nav-link" href="/listings/register">Register</a>
+      </div>
+      <div class="navbar-nav ">
+        <a class="nav-link" href="/listings/login">Login</a>
+      </div>
+        </div>
+      </div>
+    </div>
+  </nav>

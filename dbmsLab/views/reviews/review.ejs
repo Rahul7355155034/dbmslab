@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Review </title>
+</head>
+<body>
+    <h>Write your review here.</h>
+
+
+    <form  method="post"  action="/listings/<%=id%>/post">
+        <label for="rating">rate it</label>
+        <input type="range" name="rating">
+
+         <label for="comment ">write</label>
+      <textarea name="comment">    </textarea>
+        <!-- <label for="createdBy">createdBy</label>
+        <input type="text" name="createdBy"> -->
+        <button   class="btn btn-dark"> submit  </button>
+
+    </form>
+</body>
+
+</html>
