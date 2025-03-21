@@ -3,13 +3,20 @@ const {data}=require("./data.js");
 
 const mysql      = require('mysql2');
 
-const connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : 'Rahul12345@',
-  database : 'travell'
-});
+// const connection = mysql.createConnection({
+//   host     : 'localhost',
+//   user     : 'root',
+//   password : 'Rahul12345@',
+//   database : 'travell'
+// });
  
+const connection = mysql.createConnection({
+  host: process.env.DB_HOST || 'mysql-xxxxx.render.com',  // Replace with Render MySQL hostname
+  user: process.env.DB_USER || 'your_render_mysql_user',
+  password: process.env.DB_PASSWORD || 'your_render_mysql_password',
+  database: process.env.DB_NAME || 'travell',
+  port: process.env.DB_PORT || 3306
+});
 connection.connect();
 const insertlisting=()=>{
 data.forEach((listing) => {
