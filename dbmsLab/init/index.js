@@ -4,19 +4,20 @@ const {data}=require("./data.js");
 const mysql      = require('mysql2');
 
 // const connection = mysql.createConnection({
-//   host     : 'localhost',
+//   host     : 'dpg-cvertq3qf0us73fj7330-a',
 //   user     : 'root',
-//   password : 'Rahul12345@',
-//   database : 'travell'
+//   password : 'W6IjEYuzQYS0wx7utOsefUzT1xloXBoz',
+//   database : 'travell',
+//   port :3306
+
 // });
- 
 const connection = mysql.createConnection({
-  host: process.env.DB_HOST || 'mysql-xxxxx.render.com',  // Replace with Render MySQL hostname
-  user: process.env.DB_USER || 'your_render_mysql_user',
-  password: process.env.DB_PASSWORD || 'your_render_mysql_password',
-  database: process.env.DB_NAME || 'travell',
-  port: process.env.DB_PORT || 3306
+  host: process.env.DB_HOST, 
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME
 });
+
 connection.connect();
 const insertlisting=()=>{
 data.forEach((listing) => {
