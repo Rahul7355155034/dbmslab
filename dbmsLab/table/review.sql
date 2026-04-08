@@ -2,7 +2,7 @@
 let query1={
   -- Create Review Table
   USE travell;
-CREATE TABLE IF NOT EXISTS review (
+CREATE TABLE IF NOT EXISTS reviews (
     id INT AUTO_INCREMENT PRIMARY KEY,
     rating INT NOT NULL,
     comment VARCHAR(1000),

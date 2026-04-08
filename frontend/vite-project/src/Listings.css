@@ -1,0 +1,75 @@
+/* page container spacing */
+
+.row {
+    margin-top: 20px;
+}
+
+
+/* remove default link style */
+
+.listing-link {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* card design */
+
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+
+/* hover effect */
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* image styling */
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+/* card body */
+
+.card-body {
+    padding: 12px;
+    font-size: 15px;
+}
+
+
+/* title */
+
+.card-body h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+
+/* price styling */
+
+.price {
+    font-weight: bold;
+    color: #ff5a5f;
+}
+
+
+/* location text */
+
+.location {
+    color: gray;
+    font-size: 14px;
+}

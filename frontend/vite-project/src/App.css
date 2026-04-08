@@ -1,0 +1,12 @@
+button {
+    color: red;
+}
+
+#product {
+    border-style: dashed;
+    border-color: blue;
+    border-radius: 10px;
+    width: 400px;
+    margin-bottom: 10px;
+    background-color: antiquewhite;
+}
